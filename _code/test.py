@@ -1,9 +1,10 @@
 from ArrayList import *
 from LinkedList import *
+from DoubleLinkedList import *
 
 if __name__=="__main__":
 
-    mylist2=ArrayList()
+    '''mylist2=ArrayList()
     mylist2.append(3)
     mylist2.append(5)
     mylist2.append(6)
@@ -33,4 +34,24 @@ if __name__=="__main__":
     while(iter.hasNext()):
         print(iter.next())
     while(iter.hasPrevious()):
-        print(iter.previous())
+        print(iter.previous())'''
+    
+    mylist3=DoubleLinkedList()
+    mylist3.append_front(6)
+    mylist3.append_front(5)
+    mylist3.append_front(4)
+    mylist3.append_front(3)
+    mylist3.remove(2) # 3 4 6
+    mylist3.append_back(99) # 3 4 6 99
+    mylist3.update(3,11) # 3 4 6 11  
+    mylist3.pop_back() # 3 4 6 
+    mylist3.pop_front() # 4 6
+    
+
+   
+  
+
+    iter3:ListIterator=mylist3.listIterator()
+
+    while(iter3.hasPrevious()):
+        print(iter3.previous(),end=' ')

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from numpy import outer
+
 from List import *
 from Link import *
 from ListIterator import *
@@ -47,7 +47,7 @@ class LinkedList(List):
         self.size+=1
 
     def update(self, pos: int, item: E):
-        curr:List=self.head
+        curr:Link=self.head
 
         for i in range(0,pos): # 탐색
             curr=curr.next
@@ -55,7 +55,7 @@ class LinkedList(List):
         curr.next.item=item # 업데이트 
     
     def getValue(self, pos: int)-> E:
-        curr:List=self.head
+        curr:Link=self.head
 
         for i in range(0,pos): # 탐색
             curr=curr.next
@@ -66,7 +66,7 @@ class LinkedList(List):
         return self.size
     
     def remove(self, pos: int) -> E:
-        curr:List=self.head
+        curr:Link=self.head
 
         for i in range(0,pos): # 탐색
             curr=curr.next

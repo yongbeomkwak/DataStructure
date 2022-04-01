@@ -6,7 +6,7 @@ from ListIterator import *
 
 E = TypeVar('E')
 
-class List(object):
+class Dlist:
     __metaclass__ = ABCMeta
     @abstractmethod
     def clear(self):
@@ -17,7 +17,11 @@ class List(object):
         pass
 
     @abstractmethod
-    def append(self,item:E):
+    def append_front(self,item:E):
+        pass
+
+    @abstractmethod
+    def append_back(self,item:E):
         pass
 
     @abstractmethod
@@ -29,6 +33,14 @@ class List(object):
         pass
     
     @abstractmethod
+    def pop_back(self)->E:
+        pass
+
+    @abstractmethod
+    def pop_front(self)->E:
+        pass
+
+    @abstractmethod
     def remove(self,pos:int)->E:
         pass
 
@@ -39,4 +51,3 @@ class List(object):
     @abstractmethod 
     def listIterator(self) -> ListIterator : #반복자 
         pass
-    
