@@ -4,8 +4,8 @@ from typing import TypeVar
 E = TypeVar('E')
 
 
-class ListIterator(object):
-    __metaclass__ = ABCMeta
+class ListIterator(metaclass=ABCMeta):
+    
     @abstractmethod
     def hasNext(self) ->bool:
         pass

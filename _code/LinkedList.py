@@ -90,7 +90,6 @@ class LinkedList(List):
         curr:Link=self.head
 
         for i in range(0,self.size):
-       
             ret+= str(curr.next.item) + ","
             curr=curr.next
 

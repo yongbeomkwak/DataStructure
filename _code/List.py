@@ -6,8 +6,7 @@ from ListIterator import *
 
 E = TypeVar('E')
 
-class List(object):
-    __metaclass__ = ABCMeta
+class List(metaclass=ABCMeta):
     @abstractmethod
     def clear(self):
         pass
