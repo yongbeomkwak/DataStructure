@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-
-from turtle import pos
 from List import *
 from ListIterator import *
 import numpy as np
