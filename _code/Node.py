@@ -11,15 +11,15 @@ class Node(Anode):
     def getItem(self) -> E:
         return self.item
     
-    def getLeft(self) -> E:
+    def getLeft(self) -> Anode:
         if(self.left!=None):
-            return self.left.getItem()
-        return "No item"
+            return self.left
+        return None
     
-    def getRight(self) -> E:
+    def getRight(self) -> Anode:
         if(self.right!=None):
-            return self.right.getItem()
-        return "No item"
+            return self.right
+        return None
     
     
     def isLeaf(self) -> bool:
