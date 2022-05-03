@@ -20,3 +20,17 @@ class Anode(metaclass=ABCMeta):
     @abstractmethod
     def isLeaf(self)->bool:
         pass
+
+    @abstractmethod
+    def setLeft(self,n:E):
+        pass
+
+    @abstractmethod
+    def setRight(self,n:E):
+        pass
+
+    @abstractmethod
+    def setItem(self,e:E):
+        pass
+
+
