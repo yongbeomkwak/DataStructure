@@ -1,26 +1,13 @@
-from BST import *
+from Heap import *
 if __name__=="__main__":
 
-    bst:Dictionary=BST()
-    bst.insert(10,"a")
-    bst.insert(9,"b")
-    bst.insert(15,"c")
-    bst.insert(5,"d")
-    bst.insert(13,"e")
-    bst.insert(18,"f")
-    bst.insert(11,"g")
-    bst.insert(12,"h")
-    bst.insert(14,"i")
-    bst.insert(20,"k")
-    print("Inorder")
-    bst.inorder(bst.root)
-    print()
-    print(f'Size before remove:{bst.size()}')
-    print("Preorder before remove")
-    bst.preorder(bst.root)
-    print()
-    bst.remove(15)
-    print("Preorder after remove")
-    bst.preorder(bst.root)
-    print()
-    print(f'Size before remove:{bst.size()}')
+    arr=[1,2,3,4,5]
+    heap=MaxHeap(arr,len(arr),20)
+    heap.insert(100)
+    heap.insert(1000)
+    heap.insert(0)
+   
+    while(not(heap.isempty())):
+        heap.prt()
+        print(heap.removemax())
+    
