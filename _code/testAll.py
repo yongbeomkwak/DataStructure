@@ -1,13 +1,11 @@
-from Heap import *
+from Sorting import *
 if __name__=="__main__":
+    
+    a=[i for i in range(30,-1,-1)]
+    s=Sorting(a)
+    
+    s.quickSort(a,0,len(a)-1)
+    print(a)
 
-    arr=[1,2,3,4,5]
-    heap=MaxHeap(arr,len(arr),20)
-    heap.insert(100)
-    heap.insert(1000)
-    heap.insert(0)
-   
-    while(not(heap.isempty())):
-        heap.prt()
-        print(heap.removemax())
+
     
